@@ -15,7 +15,7 @@ class Service<T: Decodable> {
         do {
             return try JSONDecoder().decode(T.self, from: data)
         } catch {
-            print("\(error)")
+            print("error: \(error)")
             return nil
         }
         
